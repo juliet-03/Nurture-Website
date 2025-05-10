@@ -56,6 +56,9 @@ window.addEventListener("scroll", () => {
     scrollTopBtn.classList.remove("show");
   }
 });
+document.getElementById("hamburger").addEventListener("click", function () {
+  document.getElementById("navLinks").classList.toggle("active");
+});
 
 scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({
