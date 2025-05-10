@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nurture Home Care Services</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script src="auth.js" defer></script>
+  <script>
+    // Protect page from unauthenticated users
+    if (!localStorage.getItem("loggedIn")) {
+      window.location.href = "auth.html";
+    }
+  </script>
+  
+</head>
+<body>
+  <script>
+    if (!localStorage.getItem("loggedIn")) {
+      window.location.href = "login.html";
+    }
+  </script>
+    <header>
+        <!-- <h1>🩺 Nurture Home Care Services</h1> -->
+        <nav>
+            <ul>
+                
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-choose">Why Choose Us</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQs</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login">Login</a></li>
+                
+            </ul>
+        </nav>
+        
+    </header>
+    
+
+    <section id="hero">
+        <div class="hero-content">
+           
+            <h2>Compassionate Care, Right at Home ❤️‍🩹</h2>
+            <p>Providing quality home care services tailored to your needs. 👨‍⚕️👩‍⚕️</p>
+            <a href="#contact" class="btn">Get Started 💬</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us 👨‍👩‍👧</h2>
+        <p>At Nurture Home Care Services, we are dedicated to improving lives through compassionate, personalized, and professional in-home care. 🏡❤️</p>
+    <p>We serve the elderly, chronically ill, recovering patients, and children with special needs — providing them with tailored care plans, companionship, and skilled nursing care to make their lives more comfortable, independent, and joyful.</p>
+    <p>With a highly-trained team of caregivers and health professionals, we ensure that every client is treated with dignity, respect, and love.</p>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="service-container">
+        <div class="service-card">
+          <h3>🛏️ Daily Living Assistance</h3>
+          <p>Help with bathing, grooming, eating, mobility, and personal care.</p>
+        </div>
+        <div class="service-card">
+          <h3>🏥 Post-Surgical Care</h3>
+          <p>Support during recovery to ensure safety and prevent complications.</p>
+        </div>
+        <div class="service-card">
+          <h3>👵 Geriatric & Pediatric Care</h3>
+          <p>Customized care for seniors and children with health challenges.</p>
+        </div>
+        <div class="service-card">
+          <h3>💉 Chronic Disease Management</h3>
+          <p>Support for conditions like diabetes, hypertension, and asthma.</p>
+        </div>
+        <div class="service-card">
+          <h3>🩹 Wound Care</h3>
+          <p>Professional dressing and care for acute and chronic wounds.</p>
+        </div>
+        <div class="service-card">
+          <h3>💊 Medication Management</h3>
+          <p>Ensuring correct doses and medication schedules are followed.</p>
+        </div>
+        <div class="service-card">
+          <h3>🕊️ End-of-Life Care</h3>
+          <p>Comfort and dignity during the final stages of life.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-choose">
+        <h2>Why Choose Us? ⭐</h2>
+        <ul>
+          <li>✔ 24/7 On-call Medical Support</li>
+          <li>✔ Certified, Caring Professionals</li>
+          <li>✔ Personalized Care Plans</li>
+          <li>✔ Affordable Pricing</li>
+          <li>✔ Fully Licensed & Insured</li>
+        </ul>
+    </section>
+
+    <section id="testimonials">
+        <h2>Client Testimonials 🗣️</h2>
+        <div class="testimonial">
+            <p>"Excellent care and professional staff. Highly recommended!"</p>
+            <span>- Martha Kambura</span>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2>Frequently Asked Questions ❓</h2>
+        <p><strong>Do you provide overnight care?</strong></p>
+        <p>Yes! We offer 24/7 support to meet your needs.</p>
+        <p><strong>How do I book a caregiver?</strong></p>
+        <p>You can contact us via phone or email to schedule a consultation.</p>
+    </section>
+
+    <section id="blog">
+      <h2>Health & Wellness Tips 🧬</h2>
+      <div class="blog-container">
+        <div class="blog-post">
+          <h3>🦠 Living Positively with HIV</h3>
+          <p>Tips on antiretroviral therapy, nutrition, and mental health support.</p>
+        </div>
+        <div class="blog-post">
+          <h3>🎗️ Cancer Support & Awareness</h3>
+          <p>Early detection, treatment options, and coping with diagnosis.</p>
+        </div>
+        <div class="blog-post">
+          <h3>💉 Diabetes Management</h3>
+          <p>Daily routines, diet plans, insulin use, and blood sugar tracking.</p>
+        </div>
+        <div class="blog-post">
+          <h3>🦟 Malaria Prevention Tips</h3>
+          <p>Use of mosquito nets, awareness of symptoms, and treatment options.</p>
+        </div>
+      </div>
+    </section>
+        <section id="booking">
+          <h2>🗓️ Book a Service</h2>
+          <form onsubmit="bookService(event)">
+            <p>🧾 Select up to 2 Services:</p>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="service" value="Daily Living Assistance"> Assistance with Daily Living</label><br>
+              <label><input type="checkbox" name="service" value="Post-Surgical Care"> Post-Surgical Care</label><br>
+              <label><input type="checkbox" name="service" value="Geriatric & Pediatric Care"> Geriatric & Pediatric Care</label><br>
+              <label><input type="checkbox" name="service" value="Chronic Disease Management"> Chronic Disease Management</label><br>
+              <label><input type="checkbox" name="service" value="Wound Care"> Wound Care</label><br>
+              <label><input type="checkbox" name="service" value="Medication Management"> Medication Management</label><br>
+              <label><input type="checkbox" name="service" value="End-of-Life Care"> End-of-Life Care</label><br>
+            </div>
+            
+          </form>
+        </section>
+        
+  
+          <label for="date">📅 Select Date</label>
+          <input type="date" id="date" name="date" required> <br><br>
+  
+          <label for="time">⏰ Select Time</label>
+          <input type="time" id="time" name="time" required><br><br>
+  
+          <label for="contact">📧 Email or 📱 Phone Number</label>
+          <input type="text" id="contact" name="contact" required placeholder="Enter your email or phone"><br>
+          
+
+  
+          <button type="submit" class="btn">Book Now 🚑</button>
+      </form>
+  </section>
+  
+
+    <!-- New Contact Section -->
+    <section id="contact">
+        <h2>Contact Us 📞</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required><br>
+            <input type="email" name="email" placeholder="Your Email" required><br>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea><br>
+            <button type="submit" class="btn">Send Message 📩</button>
+        </form>
+        <p>Follow us:</p>
+        <a href="https://www.instagram.com/nurturehomecare?igsh=MTAyY3BmaHU3bHo0OQ==" target="_blank">
+          <i class="fab fa-instagram"></i> 
+        </a>
+        
+        <a href="https://www.tiktok.com/@nurture.homecare?_t=ZS-8wEs6xOzk6a&_r=1" target="_blank">
+          <i class="fab fa-tiktok"></i> 
+        </a>
+        
+        <a href="https://www.facebook.com/homebasedcareredifined" target="_blank">
+          <i class="fab fa-facebook"></i> 
+        </a>
+        
+        <a href="https://github.com/juliet-03" target="_blank">
+          <i class="fab fa-github"></i> 💻
+        </a>
+        
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us 📬</h2>
+      <p>📧 Email: <a href="mailto:nurturehomecare02@gmail.com">nurturehomecare02@gmail.com</a></p>
+      <p>📞 Phone: <a href="tel:+254759421816">+254 759421816</a></p>
+      <p>💻 GitHub: <a href="https://github.com/juliet-03">github.com/nurturecare</a></p>
+    </section>
+     
+    <script src="main.js"></script>
+    <footer>
+      <p>© 2025 Nurture Home Care Services | All Rights Reserved</p>
+    </footer>
