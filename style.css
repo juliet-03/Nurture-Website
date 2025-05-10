@@ -31,40 +31,83 @@
     align-items: center;
     justify-content: center;
   }
-  /* 📎 Navbar */
-  nav {
-    background: var(--secondary);
-    padding: 1rem 2rem;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
+  /* Navigation styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #021e3f;
+  padding: 15px 20px;
+}
+
+.logo {
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #6dd5ed;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .hamburger {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--text-light);
-    text-align: center;
   }
-  
-  nav ul {
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #021e3f;
+    flex-direction: column;
+    width: 200px;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  .nav-links.active {
     display: flex;
-    gap: 1.5rem;
-    list-style: none;
   }
-  
-  nav ul li a {
-    color: var(--text-light);
-    text-decoration: none;
-    font-weight: 500;
-    padding-bottom: 5px;
-    border-bottom: 2px solid transparent;
+
+  .nav-links li {
+    margin-bottom: 15px;
   }
-  
-  nav ul li a:hover,
-  nav ul li a.active {
-    border-color: var(--accent);
-    color: var(--accent);
+
+  .nav-links li:last-child {
+    margin-bottom: 0;
   }
-  
+}
   /* 🌠 Hero Section */
   .hero {
     height: 100vh;
